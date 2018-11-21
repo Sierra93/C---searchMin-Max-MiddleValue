@@ -1,0 +1,32 @@
+static void Main(string[] args)
+        {
+            double[] aMas = { 2, 11, 4, 5, 7 };
+            double[] cMas = { 2, 3, 5, 7, 8 };
+            //нахождение минимального элемента в массиве aMas
+            double aMin = aMas[0];
+            for (int i = 0; i < aMas.Length; i++)
+            {
+                if (aMin > aMas[i])
+                {
+                    aMin = aMas[i];  //минимальное значение массива aMas
+                }
+            }
+            //нахождение минимальное значение в массиве cMas
+            Console.WriteLine($"min массива А: {aMin}");   //выводим минимальное массива aMas
+            double cMin = cMas[0];
+            for (int i = 0; i < cMas.Length; i++)
+            {
+                if (cMin > cMas[i])
+                {
+                    cMin = cMas[i]; //минимальное значение массива cMas
+                }
+            }
+            Console.WriteLine($"min массива С: {cMin}");    //выводим минимальное массива cMas
+            //нахождение среднего арифметического минимальных элементов массивов aMas и cMas
+            double res; //нужно для промежуточного расчета суммы минимальных значений
+            double middle; //среднее арифметическое
+            res = aMin + cMin;
+            middle = res / 2;   //расчет среднего арифметического
+            Console.WriteLine($"Среднее арифметическое: {middle}");
+            Console.ReadKey();
+        }
